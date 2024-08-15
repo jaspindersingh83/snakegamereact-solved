@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+//some comment
 import Snake from "./Snake";
 import Food from "./Food";
 import Instructions from "./Instructions";
