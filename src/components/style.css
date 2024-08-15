@@ -29,18 +29,15 @@
 }
 
 #instruction-text {
-  position: absolute;
-  top: 60%;
   color: #333;
   width: 300px;
   text-align: center;
   text-transform: capitalize;
-  padding: 30px;
-  margin: 0;
 }
 
 .scores {
   display: flex;
+  width: 450px;
   justify-content: space-between;
 }
 
@@ -73,7 +70,6 @@
   border: #999 5px solid;
 }
 #logo {
-  position: absolute;
   width: 200px;
   height: 200px;
 }

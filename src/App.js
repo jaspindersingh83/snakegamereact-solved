@@ -32,9 +32,9 @@ function App() {
   };
   return (
     <div className="App" onKeyDown={handleKeyPress} tabIndex="0">
-      <header className="App-header">
-        <Board dir={dir} gamehasstarted={gamehasstarted} stopGame={stopGame} />
-        {/* <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header"> */}
+      <Board dir={dir} gamehasstarted={gamehasstarted} stopGame={stopGame} />
+      {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -46,7 +46,7 @@ function App() {
         >
           Learn React
         </a> */}
-      </header>
+      {/* </header> */}
     </div>
   );
 }

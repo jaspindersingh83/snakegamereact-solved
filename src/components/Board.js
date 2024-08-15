@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Snake from "./Snake";
 import Food from "./Food";
+import Instructions from "./Instructions";
 import "./style.css";
 
 export default function Board({ dir, gamehasstarted, stopGame }) {
@@ -90,7 +91,7 @@ export default function Board({ dir, gamehasstarted, stopGame }) {
   };
 
   return (
-    <div>
+    <>
       <div className="scores">
         <h2 id="score">{currscore.toString().padStart(3, "0")}</h2>
         {gamehasstarted ? (
@@ -102,15 +103,19 @@ export default function Board({ dir, gamehasstarted, stopGame }) {
       <div className="game-border-1">
         <div className="game-border-2">
           <div className="game-border-3">
-            <div id="game-board">
-              <Food pixel={foodlocation} />
-              {snake.map((pixel, idx) => (
-                <Snake pixel={pixel} key={idx} />
-              ))}
-            </div>
+            {!gamehasstarted ? (
+              <Instructions />
+            ) : (
+              <div id="game-board">
+                <Food pixel={foodlocation} />
+                {snake.map((pixel, idx) => (
+                  <Snake pixel={pixel} key={idx} />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
